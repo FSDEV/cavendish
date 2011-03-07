@@ -25,16 +25,14 @@
 		float: left;
 		width: 185px; /* FSDEV mod :) 20% */ /* default: 23% */
 		margin-bottom: 1em;
+        margin-right: 25px;
 	}
 
 	#mainContent {
-		float: right; /* default: right */
-		/*width: 78%;*/ /* default: 75% */
+		float: left;
 		width: auto;
-		margin-left: 200px;
 		margin-bottom: 1em;
 		margin-right: 50px;
-		position: absolute;
 	}
 	.nomenu #mainContent {
 		float: none;
