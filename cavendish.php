@@ -86,6 +86,7 @@ class cavendishTemplate extends QuickTemplate {
 
 		<!--[if lt IE 7]><script type="<?php $this->text('jsmimetype') ?>" src="<?php $this->text('stylepath') ?>/common/IEFixes.js?<?php echo $GLOBALS['wgStyleVersion'] ?>"></script>
 		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+        <!--[if lte IE 7]><link rel="stylesheet" href="<?php $this->text('stylepath') ?>/cavendish/ie7.css" media="screen" /><![endif]-->
 
 		<?php print Skin::makeGlobalVariablesScript( $this->data ); ?>
 
@@ -165,18 +166,9 @@ class cavendishTemplate extends QuickTemplate {
 
 	    <script type="<?php $this->text('jsmimetype') ?>"> if (window.isMSIE55) fixalpha(); </script> -->
 
-	    <!-- NAVIGATION -->
-		<div id="side" class="noprint"> <!-- cavendish-mod / monobook: column-one -->
-			<ul id="nav">
-				<li><span><?php $this->msg('personaltools') ?></span>
-				    <ul>
-			            <?php foreach($this->data['personal_urls'] as $key => $item) { ?>
-                        <li id="pt-<?php echo htmlspecialchars($key) ?>"><a href="<?php echo htmlspecialchars($item['href']) ?>" <?php if(!empty($item['class'])) { ?>
-                            class="<?php echo htmlspecialchars($item['class']) ?>"<?php } ?>><?php echo htmlspecialchars($item['text']) ?></a></li>
-	                    <?php } ?>
-				    </ul>
-				</li>
-
+        <!-- NAVIGATION -->
+        <div id="side" class="noprint"> <!-- cavendish-mod / monobook: column-one -->
+            <ul id="nav">
                 <?php
                 $sidebar = $this->data['sidebar'];
 
@@ -198,8 +190,16 @@ class cavendishTemplate extends QuickTemplate {
                     }
                 }
                 ?>
-			</ul>
-		</div><!-- end of SIDE div -->
+                <li><span><?php $this->msg('personaltools') ?></span>
+                    <ul>
+                        <?php foreach($this->data['personal_urls'] as $key => $item) { ?>
+                        <li id="pt-<?php echo htmlspecialchars($key) ?>"><a href="<?php echo htmlspecialchars($item['href']) ?>" <?php if(!empty($item['class'])) { ?>
+                            class="<?php echo htmlspecialchars($item['class']) ?>"<?php } ?>><?php echo htmlspecialchars($item['text']) ?></a></li>
+                        <?php } ?>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- end of SIDE div -->
 
         <!-- MAIN CONTENT -->
 	    <div id="mainContent"> <!-- cavendish-mod / monobook: column-content -->
