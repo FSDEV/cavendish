@@ -68,7 +68,7 @@ body {
 div#header { clear: both; }
 
 #header h1 a {
-	background: transparent url("fsdevlogo_small_white.png") no-repeat 10px 10px;
+    background: transparent url("fsdevlogo_small_white.png") no-repeat 10px 10px;
 }
 
 #mozilla-org a {

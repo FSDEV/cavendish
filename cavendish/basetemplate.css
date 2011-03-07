@@ -23,18 +23,14 @@
 
 	#side {
 		float: left;
-		width: 185px; /* FSDEV mod :) 20% */ /* default: 23% */
+		width: 20%; /* default: 23% */
 		margin-bottom: 1em;
 	}
 
 	#mainContent {
-		float: right; /* default: right */
-		/*width: 78%;*/ /* default: 75% */
-		width: auto;
-		margin-left: 200px;
+		float: right;
+		width: 78%; /* default: 75% */
 		margin-bottom: 1em;
-		margin-right: 50px;
-		position: absolute;
 	}
 	.nomenu #mainContent {
 		float: none;
