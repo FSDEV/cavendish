@@ -1,4 +1,5 @@
-h1. FSDEV Cavendish MediaWiki Theme
+FSDEV Cavendish MediaWiki Theme
+================
 
 This is a slight hack of the Mozilla `Cavendish' MediaWiki theme for
 MediaWiki 1.16. Basically, I made it so that the sidebar is fixed-width
@@ -13,7 +14,8 @@ easy to grab this theme: just rename your skins directory and then clone
 this repo as your new skins directory. After possible file permissions fixes,
 you should be good to go.
 
-h2. Licensing
+Licensing
+-------------
 
 Whatever. I don't remember the original license, but this is under that
 original license. Probably the Mozilla Public License, but honestly...
