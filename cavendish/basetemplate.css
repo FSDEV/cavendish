@@ -31,7 +31,7 @@
 		float: right; /* default: right */
 		/*width: 78%;*/ /* default: 75% */
 		width: auto;
-		/*margin-left: 200px;*/
+		margin-left: 200px;
 		margin-bottom: 1em;
 		margin-right: 50px;
 		position: absolute;

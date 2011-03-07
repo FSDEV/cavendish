@@ -86,6 +86,7 @@ class cavendishTemplate extends QuickTemplate {
 
 		<!--[if lt IE 7]><script type="<?php $this->text('jsmimetype') ?>" src="<?php $this->text('stylepath') ?>/common/IEFixes.js?<?php echo $GLOBALS['wgStyleVersion'] ?>"></script>
 		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+        <!--[if lte IE 7]><link rel="stylesheet" href="<?php $this->text('stylepath') ?>/cavendish/ie7.css" media="screen" /><![endif]-->
 
 		<?php print Skin::makeGlobalVariablesScript( $this->data ); ?>
 
