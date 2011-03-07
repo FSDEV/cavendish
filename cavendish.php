@@ -168,15 +168,6 @@ class cavendishTemplate extends QuickTemplate {
 	    <!-- NAVIGATION -->
 		<div id="side" class="noprint"> <!-- cavendish-mod / monobook: column-one -->
 			<ul id="nav">
-				<li><span><?php $this->msg('personaltools') ?></span>
-				    <ul>
-			            <?php foreach($this->data['personal_urls'] as $key => $item) { ?>
-                        <li id="pt-<?php echo htmlspecialchars($key) ?>"><a href="<?php echo htmlspecialchars($item['href']) ?>" <?php if(!empty($item['class'])) { ?>
-                            class="<?php echo htmlspecialchars($item['class']) ?>"<?php } ?>><?php echo htmlspecialchars($item['text']) ?></a></li>
-	                    <?php } ?>
-				    </ul>
-				</li>
-
                 <?php
                 $sidebar = $this->data['sidebar'];
 
@@ -198,6 +189,14 @@ class cavendishTemplate extends QuickTemplate {
                     }
                 }
                 ?>
+                <li><span><?php $this->msg('personaltools') ?></span>
+				    <ul>
+			            <?php foreach($this->data['personal_urls'] as $key => $item) { ?>
+                        <li id="pt-<?php echo htmlspecialchars($key) ?>"><a href="<?php echo htmlspecialchars($item['href']) ?>" <?php if(!empty($item['class'])) { ?>
+                            class="<?php echo htmlspecialchars($item['class']) ?>"<?php } ?>><?php echo htmlspecialchars($item['text']) ?></a></li>
+	                    <?php } ?>
+				    </ul>
+				</li>
 			</ul>
 		</div><!-- end of SIDE div -->
 
