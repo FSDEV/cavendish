@@ -12,6 +12,8 @@
 */
 
 #mainContent {
-
+  margin-left: 25px !important;
+  position: absolute !important;
+  float: right !important;
 }
 
