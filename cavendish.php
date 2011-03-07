@@ -166,44 +166,43 @@ class cavendishTemplate extends QuickTemplate {
 
 	    <script type="<?php $this->text('jsmimetype') ?>"> if (window.isMSIE55) fixalpha(); </script> -->
 
+        <!-- NAVIGATION -->
+        <div id="side" class="noprint"> <!-- cavendish-mod / monobook: column-one -->
+            <ul id="nav">
+                <?php
+                $sidebar = $this->data['sidebar'];
+
+                if ( !isset( $sidebar['SEARCH'] ) ) $sidebar['SEARCH'] = true;
+                if ( !isset( $sidebar['TOOLBOX'] ) ) $sidebar['TOOLBOX'] = true;
+                if ( !isset( $sidebar['LANGUAGES'] ) ) $sidebar['LANGUAGES'] = true;
+
+                foreach ($sidebar as $boxName => $cont) {
+                    if ( $boxName == 'SEARCH' ) {
+                        // The searchbox is disabled, because we already have one in the header.
+                        // Uncomment the line below to enable it again.
+                        //$this->searchBox();
+                    } elseif ( $boxName == 'TOOLBOX' ) {
+                        $this->toolbox();
+                    } elseif ( $boxName == 'LANGUAGES' ) {
+                        $this->languageBox();
+                    } else {
+                        $this->customBox( $boxName, $cont );
+                    }
+                }
+                ?>
+                <li><span><?php $this->msg('personaltools') ?></span>
+                    <ul>
+                        <?php foreach($this->data['personal_urls'] as $key => $item) { ?>
+                        <li id="pt-<?php echo htmlspecialchars($key) ?>"><a href="<?php echo htmlspecialchars($item['href']) ?>" <?php if(!empty($item['class'])) { ?>
+                            class="<?php echo htmlspecialchars($item['class']) ?>"<?php } ?>><?php echo htmlspecialchars($item['text']) ?></a></li>
+                        <?php } ?>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- end of SIDE div -->
+
         <!-- MAIN CONTENT -->
 	    <div id="mainContent"> <!-- cavendish-mod / monobook: column-content -->
-
-            <!-- NAVIGATION -->
-            <div id="side" class="noprint"> <!-- cavendish-mod / monobook: column-one -->
-                <ul id="nav">
-                    <?php
-                    $sidebar = $this->data['sidebar'];
-
-                    if ( !isset( $sidebar['SEARCH'] ) ) $sidebar['SEARCH'] = true;
-                    if ( !isset( $sidebar['TOOLBOX'] ) ) $sidebar['TOOLBOX'] = true;
-                    if ( !isset( $sidebar['LANGUAGES'] ) ) $sidebar['LANGUAGES'] = true;
-
-                    foreach ($sidebar as $boxName => $cont) {
-                        if ( $boxName == 'SEARCH' ) {
-                            // The searchbox is disabled, because we already have one in the header.
-                            // Uncomment the line below to enable it again.
-                            //$this->searchBox();
-                        } elseif ( $boxName == 'TOOLBOX' ) {
-                            $this->toolbox();
-                        } elseif ( $boxName == 'LANGUAGES' ) {
-                            $this->languageBox();
-                        } else {
-                            $this->customBox( $boxName, $cont );
-                        }
-                    }
-                    ?>
-                    <li><span><?php $this->msg('personaltools') ?></span>
-                        <ul>
-                            <?php foreach($this->data['personal_urls'] as $key => $item) { ?>
-                            <li id="pt-<?php echo htmlspecialchars($key) ?>"><a href="<?php echo htmlspecialchars($item['href']) ?>" <?php if(!empty($item['class'])) { ?>
-                                class="<?php echo htmlspecialchars($item['class']) ?>"<?php } ?>><?php echo htmlspecialchars($item['text']) ?></a></li>
-                            <?php } ?>
-                        </ul>
-                    </li>
-                </ul>
-            </div><!-- end of SIDE div -->
-
             <!-- <a name="top" id="top"></a> -->
             <!-- sitenotice was here -->
             <h1><?php $this->data['displaytitle']!=""?$this->html('title'):$this->text('title') ?></h1>
