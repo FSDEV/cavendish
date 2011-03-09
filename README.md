@@ -2,9 +2,11 @@ FSDEV Cavendish MediaWiki Theme
 ================
 
 This is a slight hack of the Mozilla `Cavendish' MediaWiki theme for
-MediaWiki 1.16. Basically, I made it so that the sidebar is fixed-width
-while the rest of the page is dynamic width. It also works on Internets
+MediaWiki 1.16. Basically, I made it so that the sidebar is --fixed-width
+while the rest of the page is dynamic width.-- It also works on Internets
 Exploder version 7.
+
+Note that I have reverted to an earlier version which works better with IE7. The dynamic width bit is a lie right now.
 
 Please feel free to fork this to your heart's content, hack it, love it,
 heck, you might even want to use it some day.
