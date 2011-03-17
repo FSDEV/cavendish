@@ -83,10 +83,6 @@ line-height: 1.8em;
 text-align: justify;
 }
 
-b {
-  font-family: "Droid Sans Bold", Verdana, 'Bitstream Vera Sans', 'DejaVu Sans';
-}
-
 /* Random HTML Styles */
 
 input[type="submit"] {
@@ -133,7 +129,7 @@ li#pt-login {
 
 /* General Structure */
 body {
-    font-family: "Droid Sans", Verdana, 'Bitstream Vera Sans', 'DejaVu Sans';
+    font-family: Verdana, 'Bitstream Vera Sans', 'DejaVu Sans', sans-serif;
     font-size: 0.75em;
     word-spacing: 1.5px;
     letter-spacing: 0.5px;
@@ -141,16 +137,16 @@ body {
 }
 
 input {
-    font-family: "Droid Sans", Verdana, 'Bitstream Vera Sans', 'DejaVu Sans';
+    font-family: Verdana, 'Bitstream Vera Sans', 'DejaVu Sans', sans-serif;
 }
 
 textarea {
-	font-family: "Droid Sans Mono";
+	font-family: "Courier", monospace;
 	font-size: 1.0em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Droid Serif", Georgia, "Times New Roman", Times;
+	font-family: Georgia, "Times New Roman", Times, serif;
 	margin: 1em 0 0.3em 0;
 }
 
@@ -165,7 +161,7 @@ li h1, li h2, li h3, li h4, li h5, li h6 {
 }
 
 tt, code, pre {
-	font-family: "Droid Sans Mono", monospace, sans-serif !important;
+	font-family: monospace, sans-serif !important;
 	overflow: auto;
 	font-size: 1.0em;
 	line-height: 1.4em;
