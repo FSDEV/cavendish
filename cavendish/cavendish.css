@@ -58,6 +58,11 @@
   src: url("droid/DroidSansMono.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Droid Sans Bold";
+  src: url("droid/DroidSansBold.ttf") format("truetype");
+}
+
 /* Body */
 
 #mainContent, #side {
@@ -76,6 +81,10 @@
 #mainContent p {
 line-height: 1.8em;
 text-align: justify;
+}
+
+b {
+  font-family: "Droid Sans Bold", Verdana, 'Bitstream Vera Sans', 'DejaVu Sans';
 }
 
 /* Random HTML Styles */
